@@ -1,0 +1,17 @@
+{
+  "id": 38,
+  "name": "Tribal Totem",
+  "description": "African-inspired geometric patterns.",
+  "category": "Tribal",
+  "type": "Tribal",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/38/1.svg",
+  "images": [
+    "/images/bangles/38/1.svg",
+    "/images/bangles/38/2.svg",
+    "/images/bangles/38/3.svg"
+  ]
+}

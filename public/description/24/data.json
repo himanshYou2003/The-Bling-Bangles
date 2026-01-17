@@ -1,0 +1,17 @@
+{
+  "id": 24,
+  "name": "Garnet Glory",
+  "description": "Deep red garnets in antique finish.",
+  "category": "Vintage",
+  "type": "Vintage",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/24/1.svg",
+  "images": [
+    "/images/bangles/24/1.svg",
+    "/images/bangles/24/2.svg",
+    "/images/bangles/24/3.svg"
+  ]
+}

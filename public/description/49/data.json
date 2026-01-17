@@ -1,0 +1,17 @@
+{
+  "id": 49,
+  "name": "Mandala Meditation",
+  "description": "Sacred geometry mandala pattern.",
+  "category": "Spiritual",
+  "type": "Spiritual",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/49/1.svg",
+  "images": [
+    "/images/bangles/49/1.svg",
+    "/images/bangles/49/2.svg",
+    "/images/bangles/49/3.svg"
+  ]
+}

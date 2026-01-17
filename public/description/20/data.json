@@ -1,0 +1,17 @@
+{
+  "id": 20,
+  "name": "Minimalist Chic",
+  "description": "Sleek single-line diamond bangle.",
+  "category": "Modern",
+  "type": "Modern",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/20/1.svg",
+  "images": [
+    "/images/bangles/20/1.svg",
+    "/images/bangles/20/2.svg",
+    "/images/bangles/20/3.svg"
+  ]
+}

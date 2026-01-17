@@ -1,0 +1,17 @@
+{
+  "id": 4,
+  "name": "Ruby Radiance",
+  "description": "Burmese rubies surrounded by a halo of diamonds.",
+  "category": "Festive",
+  "type": "Festive",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/4/1.svg",
+  "images": [
+    "/images/bangles/4/1.svg",
+    "/images/bangles/4/2.svg",
+    "/images/bangles/4/3.svg"
+  ]
+}

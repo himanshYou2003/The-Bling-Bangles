@@ -1,0 +1,17 @@
+{
+  "id": 39,
+  "name": "Cherry Blossom",
+  "description": "Delicate sakura flowers in pink gold.",
+  "category": "Romantic",
+  "type": "Romantic",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/39/1.svg",
+  "images": [
+    "/images/bangles/39/1.svg",
+    "/images/bangles/39/2.svg",
+    "/images/bangles/39/3.svg"
+  ]
+}

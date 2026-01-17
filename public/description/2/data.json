@@ -1,0 +1,17 @@
+{
+  "id": 2,
+  "name": "Diamond Cascade",
+  "description": "Brilliant cut diamonds set in white gold.",
+  "category": "Festive",
+  "type": "Festive",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "18K White Gold & VVS Diamonds",
+  "occasion": "Gala Dinner, Red Carpet",
+  "image": "/images/bangles/2/1.svg",
+  "images": [
+    "/images/bangles/2/1.svg",
+    "/images/bangles/2/2.svg",
+    "/images/bangles/2/3.svg"
+  ]
+}

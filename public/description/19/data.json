@@ -1,0 +1,17 @@
+{
+  "id": 19,
+  "name": "Peacock Splendor",
+  "description": "Peacock-inspired design with emeralds and rubies.",
+  "category": "Bridal",
+  "type": "Bridal",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/19/1.svg",
+  "images": [
+    "/images/bangles/19/1.svg",
+    "/images/bangles/19/2.svg",
+    "/images/bangles/19/3.svg"
+  ]
+}

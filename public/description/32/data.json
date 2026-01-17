@@ -1,0 +1,17 @@
+{
+  "id": 32,
+  "name": "Snake Charmer",
+  "description": "Serpent-inspired design with ruby eyes.",
+  "category": "Contemporary",
+  "type": "Contemporary",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/32/1.svg",
+  "images": [
+    "/images/bangles/32/1.svg",
+    "/images/bangles/32/2.svg",
+    "/images/bangles/32/3.svg"
+  ]
+}

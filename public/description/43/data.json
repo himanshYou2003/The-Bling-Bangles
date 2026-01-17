@@ -1,0 +1,17 @@
+{
+  "id": 43,
+  "name": "Constellation Map",
+  "description": "Star chart engraving with tiny diamonds.",
+  "category": "Contemporary",
+  "type": "Contemporary",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/43/1.svg",
+  "images": [
+    "/images/bangles/43/1.svg",
+    "/images/bangles/43/2.svg",
+    "/images/bangles/43/3.svg"
+  ]
+}

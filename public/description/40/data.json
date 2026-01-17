@@ -1,0 +1,17 @@
+{
+  "id": 40,
+  "name": "Celtic Knot",
+  "description": "Traditional Celtic interlacing pattern.",
+  "category": "Heritage",
+  "type": "Heritage",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/40/1.svg",
+  "images": [
+    "/images/bangles/40/1.svg",
+    "/images/bangles/40/2.svg",
+    "/images/bangles/40/3.svg"
+  ]
+}

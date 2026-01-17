@@ -1,0 +1,17 @@
+{
+  "id": 30,
+  "name": "Tanzanite Twilight",
+  "description": "Rare tanzanite with diamond surround.",
+  "category": "Luxury",
+  "type": "Luxury",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/30/1.svg",
+  "images": [
+    "/images/bangles/30/1.svg",
+    "/images/bangles/30/2.svg",
+    "/images/bangles/30/3.svg"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 44,
+  "name": "Enamel Empress",
+  "description": "Colorful enamel work in Mughal style.",
+  "category": "Traditional",
+  "type": "Traditional",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/44/1.svg",
+  "images": [
+    "/images/bangles/44/1.svg",
+    "/images/bangles/44/2.svg",
+    "/images/bangles/44/3.svg"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 22,
+  "name": "Opal Opulence",
+  "description": "Australian opal with diamond accents.",
+  "category": "Luxury",
+  "type": "Luxury",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/22/1.svg",
+  "images": [
+    "/images/bangles/22/1.svg",
+    "/images/bangles/22/2.svg",
+    "/images/bangles/22/3.svg"
+  ]
+}

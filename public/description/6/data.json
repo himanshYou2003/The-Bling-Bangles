@@ -1,0 +1,17 @@
+{
+  "id": 6,
+  "name": "Pearl Perfection",
+  "description": "South Sea pearls with a satin gold finish.",
+  "category": "Daily Wear",
+  "type": "Daily Wear",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/6/1.svg",
+  "images": [
+    "/images/bangles/6/1.svg",
+    "/images/bangles/6/2.svg",
+    "/images/bangles/6/3.svg"
+  ]
+}

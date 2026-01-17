@@ -1,0 +1,17 @@
+{
+  "id": 13,
+  "name": "Golden Heritage",
+  "description": "Temple jewelry inspired 22K gold bangle.",
+  "category": "Traditional",
+  "type": "Traditional",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/13/1.svg",
+  "images": [
+    "/images/bangles/13/1.svg",
+    "/images/bangles/13/2.svg",
+    "/images/bangles/13/3.svg"
+  ]
+}

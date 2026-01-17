@@ -1,0 +1,17 @@
+{
+  "id": 10,
+  "name": "Art Deco Dream",
+  "description": "Geometric patterns with onyx and diamond accents.",
+  "category": "Modern",
+  "type": "Modern",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/10/1.svg",
+  "images": [
+    "/images/bangles/10/1.svg",
+    "/images/bangles/10/2.svg",
+    "/images/bangles/10/3.svg"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 48,
+  "name": "Victorian Lace",
+  "description": "Delicate filigree work in white gold.",
+  "category": "Vintage",
+  "type": "Vintage",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/48/1.svg",
+  "images": [
+    "/images/bangles/48/1.svg",
+    "/images/bangles/48/2.svg",
+    "/images/bangles/48/3.svg"
+  ]
+}

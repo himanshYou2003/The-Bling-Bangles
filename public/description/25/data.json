@@ -1,0 +1,17 @@
+{
+  "id": 25,
+  "name": "Moonstone Magic",
+  "description": "Ethereal moonstone cabochons in silver.",
+  "category": "Bohemian",
+  "type": "Bohemian",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/25/1.svg",
+  "images": [
+    "/images/bangles/25/1.svg",
+    "/images/bangles/25/2.svg",
+    "/images/bangles/25/3.svg"
+  ]
+}

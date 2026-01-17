@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "name": "The Royal Gold",
+  "description": "24K Pure gold with intricate hand-carved patterns.",
+  "category": "Bridal",
+  "type": "Bridal",
+  "style": "Traditional",
+  "finish": "Glossy",
+  "material": "24K Pure Gold",
+  "occasion": "Wedding, Grand Reception",
+  "image": "/images/bangles/1/1.svg",
+  "images": [
+    "/images/bangles/1/1.svg",
+    "/images/bangles/1/2.svg",
+    "/images/bangles/1/3.svg"
+  ]
+}

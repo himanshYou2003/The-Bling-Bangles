@@ -1,0 +1,17 @@
+{
+  "id": 42,
+  "name": "Dragon Scale",
+  "description": "Textured scale pattern in oxidized silver.",
+  "category": "Fantasy",
+  "type": "Fantasy",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/42/1.svg",
+  "images": [
+    "/images/bangles/42/1.svg",
+    "/images/bangles/42/2.svg",
+    "/images/bangles/42/3.svg"
+  ]
+}

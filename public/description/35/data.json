@@ -1,0 +1,17 @@
+{
+  "id": 35,
+  "name": "Peridot Paradise",
+  "description": "Fresh green peridot in spring-inspired design.",
+  "category": "Fresh",
+  "type": "Fresh",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/35/1.svg",
+  "images": [
+    "/images/bangles/35/1.svg",
+    "/images/bangles/35/2.svg",
+    "/images/bangles/35/3.svg"
+  ]
+}

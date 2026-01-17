@@ -1,0 +1,17 @@
+{
+  "id": 8,
+  "name": "Vintage Rose",
+  "description": "Rose gold with Victorian-era inspired motifs.",
+  "category": "Vintage",
+  "type": "Vintage",
+  "style": "Modern",
+  "finish": "Glossy",
+  "material": "Premium Gold",
+  "occasion": "All Occasions",
+  "image": "/images/bangles/8/1.svg",
+  "images": [
+    "/images/bangles/8/1.svg",
+    "/images/bangles/8/2.svg",
+    "/images/bangles/8/3.svg"
+  ]
+}
