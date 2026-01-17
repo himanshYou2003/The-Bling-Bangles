@@ -3,15 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowLeft, Maximize2, ArrowRight, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { ArrowLeft, ArrowRight, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import Image from 'next/image';
 import { BANGLES } from '@/lib/bangles-data';
+import ProductZoom from '@/components/ProductZoom';
 
 export default function BangleDetail() {
   const params = useParams();
   const router = useRouter();
-  const [currentImage, setCurrentImage] = useState(0);
-  const [isZoomed, setIsZoomed] = useState(false);
   const [suggestedBangles, setSuggestedBangles] = useState<typeof BANGLES>([]);
   
   const [bangleDetails, setBangleDetails] = useState<any>(null);
@@ -52,18 +51,6 @@ export default function BangleDetail() {
     const shuffled = [...filtered].sort(() => 0.5 - Math.random());
     setSuggestedBangles(shuffled); // Show all bangles shuffled
   }, [bangle.id]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (!isZoomed && bangle.images.length > 1) {
-        setCurrentImage((prev) => (prev + 1) % bangle.images.length);
-      }
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [isZoomed, bangle.images.length]);
-
-  const nextImage = () => setCurrentImage((prev) => (prev + 1) % bangle.images.length);
-  const prevImage = () => setCurrentImage((prev) => (prev - 1 + bangle.images.length) % bangle.images.length);
 
   return (
     <motion.div 
@@ -113,58 +100,8 @@ export default function BangleDetail() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          <div className="relative group">
-            <div className="aspect-[4/5] overflow-hidden bg-zinc-900 relative">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentImage}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="w-full h-full relative"
-                >
-                  <Image
-                    src={bangle.images[currentImage]}
-                    alt={bangle.name}
-                    fill
-                    priority={currentImage === 0}
-                    className={`object-cover transition-transform duration-700 ${isZoomed ? 'scale-150 cursor-zoom-out' : 'cursor-zoom-in'}`}
-                    onClick={() => setIsZoomed(!isZoomed)}
-                  />
-                </motion.div>
-              </AnimatePresence>
-              
-              {bangle.images.length > 1 && (
-                <>
-                  <button 
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button 
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-                    {bangle.images.map((_: string, i: number) => (
-                      <button
-                        key={i}
-                        onClick={() => setCurrentImage(i)}
-                        className={`w-2 h-2 rounded-full transition-all ${i === currentImage ? 'bg-[#E6C78B] w-8' : 'bg-white/20'}`}
-                      />
-                    ))}
-                  </div>
-                </>
-              )}
-
-              <div className="absolute top-4 right-4 p-2 bg-black/40 backdrop-blur-md rounded-full z-10">
-                <Maximize2 className="w-4 h-4 text-white/60" />
-              </div>
-            </div>
+          <div className="relative h-[500px] lg:h-[600px]">
+            <ProductZoom images={bangle.images} alt={bangle.name} />
           </div>
 
           <div className="space-y-12">
