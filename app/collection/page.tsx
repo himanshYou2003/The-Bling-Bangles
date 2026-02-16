@@ -25,6 +25,23 @@ export default function CollectionPage() {
   const [activePrice, setActivePrice] = useState<number | 'All'>('All');
   const [filteredBangles, setFilteredBangles] = useState<Bangle[]>(BANGLES);
 
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  useEffect(() => {
+    const scrollTags = [document.documentElement, document.body];
+    if (isFilterOpen) {
+      scrollTags.forEach(tag => tag.classList.add('lock-scroll'));
+      (window as any).lenis?.stop();
+    } else {
+      scrollTags.forEach(tag => tag.classList.remove('lock-scroll'));
+      (window as any).lenis?.start();
+    }
+    return () => {
+      scrollTags.forEach(tag => tag.classList.remove('lock-scroll'));
+      (window as any).lenis?.start();
+    };
+  }, [isFilterOpen]);
+
   useEffect(() => {
     let filtered = BANGLES;
     
@@ -42,10 +59,10 @@ export default function CollectionPage() {
   }, [activeFilter, activePrice]);
 
   return (
-    <div className="min-h-screen bg-brand-bg text-zinc-900 selection:bg-brand-gold/30 selection:text-brand-accent">
+    <div className="min-h-screen bg-brand-bg text-zinc-900 selection:bg-brand-gold/30 selection:text-brand-accent overflow-x-hidden">
       <Header />
 
-      <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+      <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto relative">
         
         {/* Page Header */}
         <div className="text-center mb-16 relative">
@@ -63,12 +80,27 @@ export default function CollectionPage() {
             <div className="h-[1px] w-40 bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto" />
           </motion.div>
 
-          {/* Decorative BG */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
+          {/* Decorative BG - Carefully contained */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-brand-gold/5 rounded-full blur-3xl pointer-events-none -z-10" />
         </div>
 
-        {/* Bangles price Filter - Custom Visuals */}
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 mb-20 px-4">
+        {/* Mobile Filter Trigger - Phone Only */}
+        <div className="md:hidden flex justify-center mb-12">
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsFilterOpen(true)}
+            className="flex items-center gap-3 px-10 py-5 bg-brand-accent text-white rounded-full shadow-2xl transition-all active:opacity-90 group"
+          >
+            <Filter className="w-4 h-4 text-brand-gold transition-transform group-hover:rotate-12" />
+            <span className="text-[10px] uppercase tracking-[0.4em] font-bold">Refine Masterpieces</span>
+            {(activeFilter !== 'All' || activePrice !== 'All') && (
+              <span className="ml-2 w-2 h-2 rounded-full bg-brand-gold" />
+            )}
+          </motion.button>
+        </div>
+
+        {/* Bangles price Filter - Custom Visuals (Desktop/iPad Only) */}
+        <div className="hidden md:flex flex-wrap justify-center items-center gap-6 md:gap-12 mb-20 px-4">
           {(['All', 699, 999, 1299] as const).map((price) => (
             <motion.div 
               key={price}
@@ -101,8 +133,8 @@ export default function CollectionPage() {
           ))}
         </div>
 
-        {/* Filters */}
-        <div className="flex justify-center mb-16">
+        {/* Filters (Desktop/iPad Only) */}
+        <div className="hidden md:flex justify-center mb-16">
           <div className="inline-flex flex-wrap justify-center gap-4 bg-white/50 backdrop-blur-sm border border-brand-gold/20 p-2 rounded-full shadow-[0_4px_20px_rgba(202,168,129,0.05)]">
             {(['All', 'Gold', 'Silver', 'Mehandi'] as FilterType[]).map((filter) => (
               <button
@@ -124,6 +156,87 @@ export default function CollectionPage() {
             ))}
           </div>
         </div>
+
+        {/* Mobile Filter Overlay - Sophisticated Bottom Sheet */}
+        <AnimatePresence>
+          {isFilterOpen && (
+            <>
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsFilterOpen(false)}
+                className="fixed inset-0 bg-zinc-900/60 backdrop-blur-md z-[150]"
+              />
+              {/* Content Overlay */}
+              <motion.div
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "100%" }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                style={{ touchAction: 'none' }}
+                className="fixed bottom-0 left-0 right-0 bg-[#2d1413] rounded-t-[3rem] z-[160] px-8 pt-12 pb-16 shadow-[-20px_0_60px_rgba(0,0,0,0.5)]"
+              >
+                <div className="flex flex-col gap-12 max-w-lg mx-auto">
+                  {/* Handle */}
+                  <div className="w-12 h-1.5 bg-white/10 rounded-full mx-auto" onClick={() => setIsFilterOpen(false)} />
+                  
+                  {/* Categories */}
+                  <div>
+                    <span className="text-[10px] uppercase tracking-[0.4em] text-brand-gold font-bold mb-6 block text-center">
+                      Jewellery Category
+                    </span>
+                    <div className="grid grid-cols-2 gap-4">
+                      {(['All', 'Gold', 'Silver', 'Mehandi'] as FilterType[]).map((filter) => (
+                        <button
+                          key={filter}
+                          onClick={() => setActiveFilter(filter)}
+                          className={`py-4 rounded-2xl text-[10px] uppercase tracking-widest font-bold border transition-all duration-300 ${
+                            activeFilter === filter 
+                              ? 'bg-brand-accent text-white border-brand-accent shadow-xl' 
+                              : 'bg-white/5 text-white/90 border-white/10 hover:bg-white/10'
+                          }`}
+                        >
+                          {filter}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Price Points */}
+                  <div>
+                    <span className="text-[10px] uppercase tracking-[0.4em] text-brand-gold font-bold mb-6 block text-center">
+                      Investment Range
+                    </span>
+                    <div className="grid grid-cols-2 gap-4">
+                      {(['All', 699, 999, 1299] as const).map((price) => (
+                        <button
+                          key={price.toString()}
+                          onClick={() => setActivePrice(price)}
+                          className={`py-4 rounded-2xl text-[10px] uppercase tracking-widest font-bold border transition-all duration-300 ${
+                            activePrice === price 
+                              ? 'bg-brand-accent text-white border-brand-accent shadow-xl' 
+                              : 'bg-white/5 text-white/90 border-white/10 hover:bg-white/10'
+                          }`}
+                        >
+                          {price === 'All' ? 'Any Price' : `₹ ${price}`}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={() => setIsFilterOpen(false)}
+                    className="mt-4 w-full py-5 bg-brand-gold text-white rounded-2xl text-[10px] uppercase tracking-[0.4em] font-bold shadow-lg active:scale-[0.98] transition-transform"
+                  >
+                    View Crafted Results
+                  </button>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
 
         {/* Gallery Grid */}
         <motion.div 
@@ -155,7 +268,7 @@ export default function CollectionPage() {
                   <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   <div className="absolute bottom-4 left-4 right-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0 z-10">
-                    <span className="inline-block px-4 py-2 bg-zinc-900/80 backdrop-blur-sm border border-gray-300 text-white text-[10px] uppercase tracking-widest font-bold shadow-lg">
+                    <span className="inline-block px-4 py-2 bg-brand-accent/80 backdrop-blur-sm border border-gray-300 text-white text-[10px] uppercase tracking-widest font-bold shadow-lg">
                       View Masterpiece
                     </span>
                   </div>

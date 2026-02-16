@@ -164,7 +164,7 @@ export default function Home() {
                 />
                 
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center z-20">
-                  <span className="text-[10px] uppercase tracking-[0.4em] border border-gray-300 px-8 py-4 backdrop-blur-md text-white bg-zinc-900/40">
+                  <span className="text-[10px] uppercase tracking-[0.4em] border border-gray-300 px-8 py-4 backdrop-blur-md text-white bg-brand-accent/40">
                     View Masterpiece
                   </span>
                 </div>

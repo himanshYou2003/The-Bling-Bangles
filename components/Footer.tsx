@@ -23,8 +23,8 @@ export default function Footer() {
           className="relative z-10 w-full max-w-5xl"
         >
           <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-joyfish text-white leading-tight md:leading-[1.1] tracking-tight drop-shadow-2xl">
-            Where Every Wrist <br className="hidden sm:block" /> 
-            <span className="text-brand-gold italic">Deserves to Shine</span>
+            Adorn Your Aura <br className="hidden sm:block" /> 
+            <span className="text-brand-gold italic">With Pure Artistry</span>
           </h2>
           <div className="mt-6 md:mt-8 h-[1px] w-24 md:w-40 bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent mx-auto" />
         </motion.div>

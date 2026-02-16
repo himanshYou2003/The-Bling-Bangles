@@ -106,13 +106,13 @@ export default function ProductZoom({ images, alt }: ProductZoomProps) {
         {/* Navigation Arrows (Visible on hover/mobile) */}
         <button
           onClick={(e) => { e.stopPropagation(); prevImage(); }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-brand-bg/40 backdrop-blur-md border border-brand-gold/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-brand-gold hover:text-white transition-colors"
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-brand-bg/40 backdrop-blur-md border border-brand-gold/10 rounded-full opacity-0 group-hover:opacity-100 z-10 hover:bg-brand-gold hover:text-white transition-all duration-300"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={(e) => { e.stopPropagation(); nextImage(); }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-brand-bg/40 backdrop-blur-md border border-brand-gold/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-brand-gold hover:text-white transition-colors"
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-brand-bg/40 backdrop-blur-md border border-brand-gold/10 rounded-full opacity-0 group-hover:opacity-100 z-10 hover:bg-brand-gold hover:text-white transition-all duration-300"
         >
           <ChevronRight className="w-5 h-5" />
         </button>

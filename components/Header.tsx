@@ -8,79 +8,169 @@ import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    
+    // Robust scroll locking for both standard and smooth scroll environments
+    const scrollTags = [document.documentElement, document.body];
+    if (isOpen) {
+      scrollTags.forEach(tag => tag.classList.add('lock-scroll'));
+      (window as any).lenis?.stop();
+    } else {
+      scrollTags.forEach(tag => tag.classList.remove('lock-scroll'));
+      (window as any).lenis?.start();
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      scrollTags.forEach(tag => tag.classList.remove('lock-scroll'));
+      (window as any).lenis?.start();
+    };
+  }, [isOpen]);
+
   const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'All Bangles', href: '/collection' },
+    { name: 'Collection', href: '/collection' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-xl border-b border-brand-accent/5">
-      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header 
+      className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
+        isScrolled 
+          ? 'py-4 bg-white/70 backdrop-blur-xl border-b border-zinc-200/50 shadow-sm' 
+          : 'py-6 bg-transparent'
+      }`}
+    >
+      <nav className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-tighter text-brand-gold z-50 relative font-mosseta">
-          THE BLING BANGLES
+        <Link 
+          href="/" 
+          className="group relative z-[110] flex items-center gap-2"
+        >
+          <span className={`text-xl md:text-2xl font-mosseta tracking-tighter transition-colors duration-300 ${
+            isOpen ? 'text-white' : 'text-zinc-900 group-hover:text-brand-gold'
+          }`}>
+            THE BLING <span className="text-brand-gold italic">BANGLES</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium">
-          {menuItems.slice(1).map((item) => (
+        <div className="hidden md:flex items-center gap-12">
+          {menuItems.map((item) => (
             <Link 
               key={item.name} 
               href={item.href} 
-              className={`hover:text-brand-gold transition-colors ${pathname === item.href ? 'text-brand-accent italic' : 'text-zinc-800'}`}
+              className="relative group py-2"
             >
-              {item.name}
+              <span className={`text-[10px] uppercase tracking-[0.3em] font-bold transition-colors duration-300 ${
+                pathname === item.href ? 'text-brand-gold' : 'text-zinc-600 group-hover:text-zinc-900'
+              }`}>
+                {item.name}
+              </span>
+              {/* Animated Underline */}
+              <span className={`absolute bottom-0 left-0 h-[1.5px] bg-brand-gold transition-all duration-500 ease-[0.16, 1, 0.3, 1] ${
+                pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+              }`} />
             </Link>
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Minimalist Hamburger */}
         <button 
           onClick={toggleMenu}
-          className="md:hidden z-50 relative p-2 text-zinc-900 hover:text-brand-gold transition-colors"
+          className="md:hidden z-[110] relative flex flex-col gap-1.5 p-2"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <motion.span 
+            animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+            className={`w-6 h-[1.5px] transition-colors duration-500 ${isOpen ? 'bg-white' : 'bg-zinc-900'}`} 
+          />
+          <motion.span 
+            animate={isOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+            className={`w-6 h-[1.5px] transition-colors duration-500 ${isOpen ? 'bg-white' : 'bg-zinc-900'}`} 
+          />
+          <motion.span 
+            animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+            className={`w-6 h-[1.5px] transition-colors duration-500 ${isOpen ? 'bg-white' : 'bg-zinc-900'}`} 
+          />
         </button>
 
-        {/* Mobile Menu Overlay */}
+        {/* Immersive Mobile Menu Overlay */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, x: '100%' }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: '100%' }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed inset-0 bg-brand-bg z-40 flex flex-col items-center justify-center md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              style={{ touchAction: 'none' }}
+              className="fixed inset-0 bg-[#2d1413] z-[100] md:hidden flex flex-col justify-between"
             >
-              <div className="flex flex-col gap-8 text-center">
-                {menuItems.map((item, index) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 + index * 0.1 }}
-                  >
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`text-3xl font-serif tracking-tight hover:text-brand-gold transition-colors ${pathname === item.href ? 'text-brand-accent' : 'text-zinc-900'}`}
-                    >
-                      {item.name}
-                    </Link>
-                  </motion.div>
-                ))}
+              {/* Background Decorative Accent */}
+              <div className="absolute top-0 right-0 w-full h-full opacity-[0.05] pointer-events-none select-none overflow-hidden">
+                <span className="text-[100vw] font-mosseta absolute -top-20 -right-20 text-white">B</span>
               </div>
 
-              {/* Decorative Element */}
-              <div className="absolute bottom-10 left-0 w-full flex justify-center opacity-30">
-                <div className="h-[1px] w-24 bg-brand-gold" />
+              {/* Menu Content */}
+              <div className="flex-1 flex flex-col items-center justify-center pt-20 px-8">
+                {/* Brand asset for continuity */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.2, duration: 0.8 }}
+                  className="mb-16 opacity-100"
+                >
+                  <img src="/assets/namaste.png" alt="Namaste" className="w-24 h-24 object-contain" />
+                </motion.div>
+
+                <nav className="flex flex-col items-center gap-10">
+                  {menuItems.map((item, index) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 + index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="group relative block text-center"
+                      >
+                         <span className={`text-4xl sm:text-5xl font-mosseta transition-all duration-300 ${
+                          pathname === item.href ? 'text-brand-gold italic' : 'text-white/90 group-hover:text-brand-gold'
+                        }`}>
+                          {item.name}
+                        </span>
+                        <div className={`mt-2 h-[1px] bg-brand-gold transition-all duration-500 mx-auto ${
+                          pathname === item.href ? 'w-24' : 'w-0 group-hover:w-20'
+                        }`} />
+                      </Link>
+                    </motion.div>
+                  ))}
+                </nav>
               </div>
+
+              {/* Mobile Footer Area */}
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                className="pb-16 px-8 flex flex-col items-center gap-6"
+              >
+                <div className="h-[1px] w-12 bg-white/10" />
+                <p className="text-[10px] uppercase tracking-[0.4em] text-zinc-400">
+                  ESTD. 2026 — THE BLING BANGLES
+                </p>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>

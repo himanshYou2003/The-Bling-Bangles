@@ -7,19 +7,12 @@ export default function Loader() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Dynamically load the Tenor embed script
-    const script = document.createElement('script');
-    script.src = "https://tenor.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Hide loader after 1.5 seconds
+    // Hide loader after 2 seconds for a smoother feel
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 1500);
+    }, 2000);
 
     return () => {
-      document.body.removeChild(script);
       clearTimeout(timer);
     };
   }, []);
@@ -30,18 +23,26 @@ export default function Loader() {
         <motion.div 
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-brand-bg"
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#2d1413]"
         >
-          <div className="w-64 h-64 md:w-96 md:h-96 relative">
-            <div 
-              className="tenor-gif-embed" 
-              data-postid="14463166" 
-              data-share-method="host" 
-              data-aspect-ratio="1" 
-              data-width="100%"
-            ></div>
-          </div>
+          <motion.div 
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.16, 1, 0.3, 1],
+              delay: 0.2
+            }}
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 relative flex items-center justify-center p-8"
+          >
+            {/* Using converted PNG since browsers cannot render .eps natively */}
+            <img 
+              src="/assets/namaste.png" 
+              alt="Namaste" 
+              className="w-full h-full object-contain"
+            />
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

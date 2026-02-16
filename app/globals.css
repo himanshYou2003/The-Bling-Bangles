@@ -8,6 +8,16 @@
     -moz-osx-font-smoothing: grayscale;
     background: #f4f1eb;
   }
+  html.lock-scroll,
+  body.lock-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    position: fixed !important;
+    touch-action: none !important;
+    -webkit-overflow-scrolling: none !important;
+    overscroll-behavior: none !important;
+  }
 }
 
 /* No global colors; components decide their own colors */

@@ -23,8 +23,12 @@ export default function SmoothScroll() {
 
     requestAnimationFrame(raf);
 
+    // Expose lenis globally to allow other components to stop/start scroll
+    (window as any).lenis = lenis;
+
     return () => {
       lenis.destroy();
+      (window as any).lenis = null;
     };
   }, []);
 
