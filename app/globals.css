@@ -121,6 +121,13 @@ body {
     top: 100%;
     opacity: 1;
   }
+
+  .instant-blur {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    will-change: backdrop-filter;
+  }
 }
 
 @keyframes fog-move {

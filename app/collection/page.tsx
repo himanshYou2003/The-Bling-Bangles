@@ -265,10 +265,10 @@ export default function CollectionPage() {
                   />
                   
                   {/* Overlay - Transparent/Shine focus */}
-                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                   
-                  <div className="absolute bottom-4 left-4 right-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0 z-10">
-                    <span className="inline-block px-4 py-2 bg-brand-accent/80 backdrop-blur-sm border border-gray-300 text-white text-[10px] uppercase tracking-widest font-bold shadow-lg">
+                  <div className="absolute bottom-4 left-4 right-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                    <span className="inline-block px-4 py-2 instant-blur border border-gray-300 text-white text-[10px] uppercase tracking-widest font-bold shadow-lg">
                       View Masterpiece
                     </span>
                   </div>
