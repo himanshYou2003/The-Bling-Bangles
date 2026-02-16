@@ -3,7 +3,7 @@
   "name": "Minimalist Chic",
   "description": "Sleek single-line diamond bangle.",
   "category": "Modern",
-  "type": "Modern",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/20/1.svg",
     "/images/bangles/20/2.svg",
     "/images/bangles/20/3.svg"
-  ]
+  ],
+  "price": 1299
 }

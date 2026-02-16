@@ -3,7 +3,7 @@
   "name": "Baroque Pearl",
   "description": "Irregular baroque pearls in gold wire.",
   "category": "Artistic",
-  "type": "Artistic",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/46/1.svg",
     "/images/bangles/46/2.svg",
     "/images/bangles/46/3.svg"
-  ]
+  ],
+  "price": 999
 }

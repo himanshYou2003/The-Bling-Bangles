@@ -3,7 +3,7 @@
   "name": "Hammered Warrior",
   "description": "Hand-hammered tribal pattern in brass.",
   "category": "Tribal",
-  "type": "Tribal",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/34/1.svg",
     "/images/bangles/34/2.svg",
     "/images/bangles/34/3.svg"
-  ]
+  ],
+  "price": 699
 }

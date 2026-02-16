@@ -3,7 +3,7 @@
   "name": "Emerald Elegance",
   "description": "Deep green Colombian emeralds in a vintage setting.",
   "category": "Bridal",
-  "type": "Bridal",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/3/1.svg",
     "/images/bangles/3/2.svg",
     "/images/bangles/3/3.svg"
-  ]
+  ],
+  "price": 1299
 }

@@ -3,7 +3,7 @@
   "name": "Sunburst Ray",
   "description": "Radiating sun design in yellow diamonds.",
   "category": "Festive",
-  "type": "Festive",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/47/1.svg",
     "/images/bangles/47/2.svg",
     "/images/bangles/47/3.svg"
-  ]
+  ],
+  "price": 1299
 }

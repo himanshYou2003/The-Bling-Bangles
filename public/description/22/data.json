@@ -3,7 +3,7 @@
   "name": "Opal Opulence",
   "description": "Australian opal with diamond accents.",
   "category": "Luxury",
-  "type": "Luxury",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/22/1.svg",
     "/images/bangles/22/2.svg",
     "/images/bangles/22/3.svg"
-  ]
+  ],
+  "price": 1299
 }

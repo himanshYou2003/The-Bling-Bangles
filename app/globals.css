@@ -6,29 +6,35 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #0b0b0b;
+    background: #f4f1eb;
   }
 }
 
 /* No global colors; components decide their own colors */
 body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  background-color: #0b0b0b;
-  color: #ffffff;
+  background-color: #f4f1eb;
+  color: #1a1a1a;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .font-joyfish {
+    font-family: var(--font-joyfish), Arial, Helvetica, sans-serif;
+  }
+  .font-mosseta {
+    font-family: var(--font-mosseta), Arial, Helvetica, sans-serif;
+  }
   .text-gold {
-    color: #e6c78b;
+    color: #caa881;
   }
   .bg-gold {
-    background-color: #e6c78b;
+    background-color: #caa881;
   }
   .border-gold {
-    border-color: #e6c78b;
+    border-color: #caa881;
   }
   .text-rose {
     color: #d4a373;
@@ -37,41 +43,42 @@ body {
     background-color: #d4a373;
   }
   .bg-luxury-gradient {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0b0b0b 100%);
+    background: linear-gradient(135deg, #f4f1eb 0%, #e8e4d9 100%);
   }
   .bg-smoky-gradient {
     background: radial-gradient(
       circle at center,
-      rgba(40, 40, 40, 0.8) 0%,
-      rgba(11, 11, 11, 1) 100%
+      rgba(244, 241, 235, 0.8) 0%,
+      rgba(232, 228, 217, 1) 100%
     );
   }
   .bg-fog-layer {
     background: radial-gradient(
       circle,
-      rgba(230, 199, 139, 0.05) 0%,
-      rgba(0, 0, 0, 0) 70%
+      rgba(230, 199, 139, 0.1) 0%,
+      rgba(255, 255, 255, 0) 70%
     );
     filter: blur(60px);
   }
   .bg-smoke-layer {
     background: radial-gradient(
       circle,
-      rgba(230, 199, 139, 0.08) 0%,
-      rgba(0, 0, 0, 0) 70%
+      rgba(202, 168, 129, 0.15) 0%,
+      rgba(244, 241, 235, 0) 70%
     );
     filter: blur(80px);
-    mix-blend-mode: screen;
+    mix-blend-mode: multiply;
   }
   .bg-gold-gradient {
-    background: linear-gradient(135deg, #e6c78b 0%, #d4a373 100%);
+    background: linear-gradient(135deg, #caa881 0%, #b8976f 100%);
   }
   .text-glow-gold {
-    text-shadow: 0 0 20px rgba(230, 199, 139, 0.3);
+    text-shadow: 0 0 20px rgba(184, 134, 11, 0.2);
   }
   .bg-noise {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.03;
+    opacity: 0.05;
+    filter: invert(1);
   }
 
   .shine-effect {
@@ -90,7 +97,7 @@ body {
       to bottom right,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0) 40%,
-      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.6) 50%,
       rgba(255, 255, 255, 0) 60%,
       rgba(255, 255, 255, 0) 100%
     );
@@ -133,6 +140,19 @@ body {
   }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 .animate-fog {
   animation: fog-move 20s ease-in-out infinite;
 }
@@ -167,7 +187,7 @@ html {
 }
 
 .btn-gold-glow:hover {
-  box-shadow: 0 0 25px rgba(230, 199, 139, 0.4);
+  box-shadow: 0 0 25px rgba(202, 168, 129, 0.6);
   transform: translateY(-2px);
 }
 
@@ -175,12 +195,12 @@ html {
 .custom-cursor {
   width: 20px;
   height: 20px;
-  background: #e6c78b;
+  background: #a72225;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   transition: transform 0.1s ease-out;
 }
 
@@ -189,8 +209,8 @@ html {
   height: 150px;
   background: radial-gradient(
     circle,
-    rgba(230, 199, 139, 0.15) 0%,
-    rgba(230, 199, 139, 0) 70%
+    rgba(167, 34, 37, 0.1) 0%,
+    rgba(167, 34, 37, 0) 70%
   );
   border-radius: 50%;
   position: fixed;
@@ -200,11 +220,11 @@ html {
   transition: transform 0.2s ease-out;
 }
 
-/* Cinematic Vignette */
+/* Cinematic Vignette - Lighter for white theme */
 .vignette {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
+  background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.05) 100%);
   pointer-events: none;
   z-index: 40;
 }

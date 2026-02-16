@@ -3,7 +3,7 @@
   "name": "Garnet Glory",
   "description": "Deep red garnets in antique finish.",
   "category": "Vintage",
-  "type": "Vintage",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/24/1.svg",
     "/images/bangles/24/2.svg",
     "/images/bangles/24/3.svg"
-  ]
+  ],
+  "price": 999
 }

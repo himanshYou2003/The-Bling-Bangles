@@ -3,7 +3,7 @@
   "name": "Byzantine Beauty",
   "description": "Byzantine chain pattern in yellow gold.",
   "category": "Vintage",
-  "type": "Vintage",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/36/1.svg",
     "/images/bangles/36/2.svg",
     "/images/bangles/36/3.svg"
-  ]
+  ],
+  "price": 999
 }

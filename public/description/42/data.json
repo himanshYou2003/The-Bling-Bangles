@@ -3,7 +3,7 @@
   "name": "Dragon Scale",
   "description": "Textured scale pattern in oxidized silver.",
   "category": "Fantasy",
-  "type": "Fantasy",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/42/1.svg",
     "/images/bangles/42/2.svg",
     "/images/bangles/42/3.svg"
-  ]
+  ],
+  "price": 699
 }

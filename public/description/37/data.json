@@ -3,7 +3,7 @@
   "name": "Starlight Sparkle",
   "description": "Star motif with scattered diamonds.",
   "category": "Festive",
-  "type": "Festive",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/37/1.svg",
     "/images/bangles/37/2.svg",
     "/images/bangles/37/3.svg"
-  ]
+  ],
+  "price": 999
 }

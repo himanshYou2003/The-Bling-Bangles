@@ -3,7 +3,7 @@
   "name": "Aquamarine Wave",
   "description": "Ocean-blue aquamarine in flowing design.",
   "category": "Bohemian",
-  "type": "Bohemian",
+  "type": "Silver",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/33/1.svg",
     "/images/bangles/33/2.svg",
     "/images/bangles/33/3.svg"
-  ]
+  ],
+  "price": 699
 }

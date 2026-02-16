@@ -3,7 +3,7 @@
   "name": "Coral Charm",
   "description": "Natural coral beads set in 18K yellow gold.",
   "category": "Festive",
-  "type": "Festive",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/11/1.svg",
     "/images/bangles/11/2.svg",
     "/images/bangles/11/3.svg"
-  ]
+  ],
+  "price": 999
 }

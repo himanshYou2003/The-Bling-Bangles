@@ -3,7 +3,7 @@
   "name": "Cherry Blossom",
   "description": "Delicate sakura flowers in pink gold.",
   "category": "Romantic",
-  "type": "Romantic",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/39/1.svg",
     "/images/bangles/39/2.svg",
     "/images/bangles/39/3.svg"
-  ]
+  ],
+  "price": 999
 }

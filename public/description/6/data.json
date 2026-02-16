@@ -3,7 +3,7 @@
   "name": "Pearl Perfection",
   "description": "South Sea pearls with a satin gold finish.",
   "category": "Daily Wear",
-  "type": "Daily Wear",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/6/1.svg",
     "/images/bangles/6/2.svg",
     "/images/bangles/6/3.svg"
-  ]
+  ],
+  "price": 999
 }

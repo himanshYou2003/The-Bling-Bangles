@@ -3,7 +3,7 @@
   "name": "Sapphire Serenity",
   "description": "Royal blue sapphires in a modern geometric design.",
   "category": "Daily Wear",
-  "type": "Daily Wear",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/5/1.svg",
     "/images/bangles/5/2.svg",
     "/images/bangles/5/3.svg"
-  ]
+  ],
+  "price": 999
 }

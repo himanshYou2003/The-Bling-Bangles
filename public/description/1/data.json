@@ -3,7 +3,7 @@
   "name": "The Royal Gold",
   "description": "24K Pure gold with intricate hand-carved patterns.",
   "category": "Bridal",
-  "type": "Bridal",
+  "type": "Gold",
   "style": "Traditional",
   "finish": "Glossy",
   "material": "24K Pure Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/1/1.svg",
     "/images/bangles/1/2.svg",
     "/images/bangles/1/3.svg"
-  ]
+  ],
+  "price": 1299
 }

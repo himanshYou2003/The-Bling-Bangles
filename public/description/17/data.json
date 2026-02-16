@@ -3,7 +3,7 @@
   "name": "Amethyst Aurora",
   "description": "Purple amethyst stones with rose gold.",
   "category": "Vintage",
-  "type": "Vintage",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/17/1.svg",
     "/images/bangles/17/2.svg",
     "/images/bangles/17/3.svg"
-  ]
+  ],
+  "price": 999
 }

@@ -3,7 +3,7 @@
   "name": "Citrine Sunshine",
   "description": "Bright citrine stones in hammered gold.",
   "category": "Daily Wear",
-  "type": "Daily Wear",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/18/1.svg",
     "/images/bangles/18/2.svg",
     "/images/bangles/18/3.svg"
-  ]
+  ],
+  "price": 999
 }

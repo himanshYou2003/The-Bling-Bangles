@@ -3,7 +3,7 @@
   "name": "Golden Heritage",
   "description": "Temple jewelry inspired 22K gold bangle.",
   "category": "Traditional",
-  "type": "Traditional",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/13/1.svg",
     "/images/bangles/13/2.svg",
     "/images/bangles/13/3.svg"
-  ]
+  ],
+  "price": 999
 }

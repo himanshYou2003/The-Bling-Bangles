@@ -59,8 +59,8 @@ export default function ProductZoom({ images, alt }: ProductZoomProps) {
             onClick={() => setCurrentImageIndex(idx)}
             className={`relative w-20 h-20 lg:w-full lg:h-24 flex-shrink-0 border transition-all duration-300 ${
               currentImageIndex === idx
-                ? 'border-[#E6C78B] opacity-100'
-                : 'border-white/10 opacity-60 hover:opacity-100 hover:border-white/30'
+                ? 'border-brand-gold opacity-100'
+                : 'border-brand-gold/10 opacity-60 hover:opacity-100 hover:border-brand-gold/30'
             }`}
           >
             <Image
@@ -74,7 +74,7 @@ export default function ProductZoom({ images, alt }: ProductZoomProps) {
       </div>
 
       {/* Main Image Area */}
-      <div className="relative flex-1 aspect-[4/5] lg:aspect-auto lg:h-[600px] bg-zinc-900/50 border border-white/5 group">
+      <div className="relative flex-1 aspect-[4/5] lg:aspect-auto lg:h-[600px] bg-white/40 border border-brand-gold/10 group rounded-sm">
         <div
           ref={imageRef}
           className="relative w-full h-full cursor-crosshair overflow-hidden"
@@ -93,7 +93,7 @@ export default function ProductZoom({ images, alt }: ProductZoomProps) {
           {/* Zoom Lens (Optional visual indicator on main image) */}
           {showZoom && !isMobile && (
             <div 
-              className="absolute w-40 h-40 border border-[#E6C78B]/50 bg-[#E6C78B]/10 pointer-events-none backdrop-blur-[1px]"
+              className="absolute w-40 h-40 border border-brand-gold/50 bg-brand-gold/10 pointer-events-none backdrop-blur-[1px]"
               style={{
                 left: `${mousePosition.x}%`,
                 top: `${mousePosition.y}%`,
@@ -106,16 +106,17 @@ export default function ProductZoom({ images, alt }: ProductZoomProps) {
         {/* Navigation Arrows (Visible on hover/mobile) */}
         <button
           onClick={(e) => { e.stopPropagation(); prevImage(); }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-[#E6C78B] hover:text-black"
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-brand-bg/40 backdrop-blur-md border border-brand-gold/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-brand-gold hover:text-white transition-colors"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={(e) => { e.stopPropagation(); nextImage(); }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-[#E6C78B] hover:text-black"
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-brand-bg/40 backdrop-blur-md border border-brand-gold/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-brand-gold hover:text-white transition-colors"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
+
 
         {/* Zoomed View Panel */}
         <AnimatePresence>
@@ -125,7 +126,7 @@ export default function ProductZoom({ images, alt }: ProductZoomProps) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.2 }}
-              className="absolute left-[105%] top-0 w-[500px] h-[600px] bg-black border border-[#E6C78B]/20 z-50 overflow-hidden shadow-2xl hidden lg:block"
+              className="absolute left-[105%] top-0 w-[500px] h-[600px] bg-brand-bg border border-brand-gold/20 z-50 overflow-hidden shadow-2xl hidden lg:block"
             >
               <div
                 className="absolute w-[200%] h-[200%]"

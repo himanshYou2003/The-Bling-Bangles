@@ -3,7 +3,7 @@
   "name": "Jadestone Jade",
   "description": "Imperial jade in traditional Chinese design.",
   "category": "Traditional",
-  "type": "Traditional",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/28/1.svg",
     "/images/bangles/28/2.svg",
     "/images/bangles/28/3.svg"
-  ]
+  ],
+  "price": 999
 }

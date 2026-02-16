@@ -3,7 +3,7 @@
   "name": "Champagne Diamonds",
   "description": "Rare champagne diamonds in rose gold.",
   "category": "Luxury",
-  "type": "Luxury",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/26/1.svg",
     "/images/bangles/26/2.svg",
     "/images/bangles/26/3.svg"
-  ]
+  ],
+  "price": 1299
 }

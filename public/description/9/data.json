@@ -3,7 +3,7 @@
   "name": "Kundan Classic",
   "description": "Traditional Kundan work with red and green stones.",
   "category": "Traditional",
-  "type": "Traditional",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/9/1.svg",
     "/images/bangles/9/2.svg",
     "/images/bangles/9/3.svg"
-  ]
+  ],
+  "price": 999
 }

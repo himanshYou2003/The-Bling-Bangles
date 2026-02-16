@@ -3,7 +3,7 @@
   "name": "Enamel Empress",
   "description": "Colorful enamel work in Mughal style.",
   "category": "Traditional",
-  "type": "Traditional",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/44/1.svg",
     "/images/bangles/44/2.svg",
     "/images/bangles/44/3.svg"
-  ]
+  ],
+  "price": 999
 }

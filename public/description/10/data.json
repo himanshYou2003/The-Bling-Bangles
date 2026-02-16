@@ -3,7 +3,7 @@
   "name": "Art Deco Dream",
   "description": "Geometric patterns with onyx and diamond accents.",
   "category": "Modern",
-  "type": "Modern",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/10/1.svg",
     "/images/bangles/10/2.svg",
     "/images/bangles/10/3.svg"
-  ]
+  ],
+  "price": 1299
 }

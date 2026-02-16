@@ -3,15 +3,16 @@
   "name": "Diamond Cascade",
   "description": "Brilliant cut diamonds set in white gold.",
   "category": "Festive",
-  "type": "Festive",
+  "type": "Silver",
   "style": "Modern",
   "finish": "Glossy",
-  "material": "18K White Gold & VVS Diamonds",
+  "material": "24K White Gold & VVS Diamonds",
   "occasion": "Gala Dinner, Red Carpet",
   "image": "/images/bangles/2/1.svg",
   "images": [
     "/images/bangles/2/1.svg",
     "/images/bangles/2/2.svg",
     "/images/bangles/2/3.svg"
-  ]
+  ],
+  "price": 1299
 }

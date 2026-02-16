@@ -29,7 +29,8 @@ BANGLES.forEach((bangle) => {
     material: bangle.material || 'Premium Gold',
     occasion: bangle.occasion || 'All Occasions',
     image: bangle.image,
-    images: bangle.images || [bangle.image]
+    images: bangle.images || [bangle.image],
+    price: bangle.price
   };
 
   fs.writeFileSync(

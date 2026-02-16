@@ -3,7 +3,7 @@
   "name": "Twisted Elegance",
   "description": "Two-tone twisted cable design.",
   "category": "Contemporary",
-  "type": "Contemporary",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/23/1.svg",
     "/images/bangles/23/2.svg",
     "/images/bangles/23/3.svg"
-  ]
+  ],
+  "price": 999
 }

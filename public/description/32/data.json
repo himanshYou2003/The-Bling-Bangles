@@ -3,7 +3,7 @@
   "name": "Snake Charmer",
   "description": "Serpent-inspired design with ruby eyes.",
   "category": "Contemporary",
-  "type": "Contemporary",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/32/1.svg",
     "/images/bangles/32/2.svg",
     "/images/bangles/32/3.svg"
-  ]
+  ],
+  "price": 999
 }

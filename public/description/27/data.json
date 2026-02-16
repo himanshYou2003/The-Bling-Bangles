@@ -3,7 +3,7 @@
   "name": "Geometric Fusion",
   "description": "Modern hexagonal pattern with mixed metals.",
   "category": "Modern",
-  "type": "Modern",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/27/1.svg",
     "/images/bangles/27/2.svg",
     "/images/bangles/27/3.svg"
-  ]
+  ],
+  "price": 999
 }

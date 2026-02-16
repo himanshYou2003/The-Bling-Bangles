@@ -3,7 +3,7 @@
   "name": "Platinum Prestige",
   "description": "Sleek platinum band with micro-pavé diamonds.",
   "category": "Modern",
-  "type": "Modern",
+  "type": "Silver",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/7/1.svg",
     "/images/bangles/7/2.svg",
     "/images/bangles/7/3.svg"
-  ]
+  ],
+  "price": 1299
 }

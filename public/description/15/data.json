@@ -3,7 +3,7 @@
   "name": "Turquoise Treasure",
   "description": "Genuine turquoise in sterling silver.",
   "category": "Bohemian",
-  "type": "Bohemian",
+  "type": "Silver",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/15/1.svg",
     "/images/bangles/15/2.svg",
     "/images/bangles/15/3.svg"
-  ]
+  ],
+  "price": 699
 }

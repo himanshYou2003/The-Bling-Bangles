@@ -8,7 +8,16 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {}, // no themed colors mapped
+    extend: {
+      colors: {
+        brand: {
+          bg: "#f4f1eb",
+          accent: "#a72225",
+          gold: "#caa881",
+          footer: "#1f1f1f",
+        }
+      }
+    },
   },
   plugins: [],
 };

@@ -3,7 +3,7 @@
   "name": "Peacock Splendor",
   "description": "Peacock-inspired design with emeralds and rubies.",
   "category": "Bridal",
-  "type": "Bridal",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/19/1.svg",
     "/images/bangles/19/2.svg",
     "/images/bangles/19/3.svg"
-  ]
+  ],
+  "price": 1299
 }

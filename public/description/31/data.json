@@ -3,7 +3,7 @@
   "name": "Lotus Bloom",
   "description": "Sacred lotus design in 22K gold.",
   "category": "Spiritual",
-  "type": "Spiritual",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/31/1.svg",
     "/images/bangles/31/2.svg",
     "/images/bangles/31/3.svg"
-  ]
+  ],
+  "price": 999
 }

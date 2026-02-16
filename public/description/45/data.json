@@ -3,7 +3,7 @@
   "name": "Wave Rider",
   "description": "Ocean wave pattern in blue topaz.",
   "category": "Nautical",
-  "type": "Nautical",
+  "type": "Gold",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/45/1.svg",
     "/images/bangles/45/2.svg",
     "/images/bangles/45/3.svg"
-  ]
+  ],
+  "price": 999
 }

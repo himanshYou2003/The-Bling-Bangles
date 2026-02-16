@@ -3,7 +3,7 @@
   "name": "Tribal Totem",
   "description": "African-inspired geometric patterns.",
   "category": "Tribal",
-  "type": "Tribal",
+  "type": "Mehandi",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/38/1.svg",
     "/images/bangles/38/2.svg",
     "/images/bangles/38/3.svg"
-  ]
+  ],
+  "price": 699
 }

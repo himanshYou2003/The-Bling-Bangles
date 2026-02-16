@@ -3,7 +3,7 @@
   "name": "Infinity Loop",
   "description": "Endless love symbol in white gold.",
   "category": "Romantic",
-  "type": "Romantic",
+  "type": "Silver",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/29/1.svg",
     "/images/bangles/29/2.svg",
     "/images/bangles/29/3.svg"
-  ]
+  ],
+  "price": 699
 }

@@ -3,7 +3,7 @@
   "name": "Victorian Lace",
   "description": "Delicate filigree work in white gold.",
   "category": "Vintage",
-  "type": "Vintage",
+  "type": "Silver",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/48/1.svg",
     "/images/bangles/48/2.svg",
     "/images/bangles/48/3.svg"
-  ]
+  ],
+  "price": 999
 }

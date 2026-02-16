@@ -66,8 +66,8 @@ export default function BangleCanvas({ scrollProgress }: BangleCanvasProps) {
           fov: cameraSettings.fov 
         }}
       >
-        <color attach="background" args={['#0B0B0B']} />
-        <fog attach="fog" args={['#0B0B0B', 5, 15]} />
+        <color attach="background" args={['#ffffff']} />
+        <fog attach="fog" args={['#ffffff', 5, 15]} />
         
         <ambientLight intensity={0.3} />
         <spotLight 

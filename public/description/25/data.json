@@ -3,7 +3,7 @@
   "name": "Moonstone Magic",
   "description": "Ethereal moonstone cabochons in silver.",
   "category": "Bohemian",
-  "type": "Bohemian",
+  "type": "Silver",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/25/1.svg",
     "/images/bangles/25/2.svg",
     "/images/bangles/25/3.svg"
-  ]
+  ],
+  "price": 699
 }

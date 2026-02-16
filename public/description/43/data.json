@@ -3,7 +3,7 @@
   "name": "Constellation Map",
   "description": "Star chart engraving with tiny diamonds.",
   "category": "Contemporary",
-  "type": "Contemporary",
+  "type": "Silver",
   "style": "Modern",
   "finish": "Glossy",
   "material": "Premium Gold",
@@ -13,5 +13,6 @@
     "/images/bangles/43/1.svg",
     "/images/bangles/43/2.svg",
     "/images/bangles/43/3.svg"
-  ]
+  ],
+  "price": 999
 }
